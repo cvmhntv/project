@@ -13,7 +13,6 @@ class fourth_win(QWidget):
     def set_appear(self):
         self.setWindowTitle(text3_title)
         self.resize(win_width, win_height)
-        self.move(win_x, win_y)
     def initUI(self):
         self.question33 = QLabel(question3)
         self.question33.setWordWrap(True)
@@ -38,11 +37,11 @@ class fourth_win(QWidget):
         self.setLayout(self.layout_main)
     def show_win(self):
         self.win = QMessageBox()
-        self.win.setText('верно')
+        self.win.setText('Верно')
         self.win.exec_()
     def show_lose(self):
         self.lose = QMessageBox()
-        self.lose.setText('неверно')
+        self.lose.setText(f'Неверно\nПравильный ответ: {answer3_4}')
         self.lose.exec_()
     def connects(self):
         self.answer31.clicked.connect(self.show_lose)
