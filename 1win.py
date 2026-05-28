@@ -27,5 +27,5 @@ class first_win(QWidget):
         self.tw = second_win()
 
 app = QApplication([])
-mw = MainWin()
+mw = first_win()
 app.exec_()
