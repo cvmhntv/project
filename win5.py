@@ -10,7 +10,6 @@ class fifth_win(QWidget):
     def set_appear(self):
         self.setWindowTitle(text3_title)
         self.resize(win_width, win_height)
-        self.move(win_x, win_y)
     def initUI(self):
         self.outro = QLabel(text4_outro)
         self.outro.setWordWrap(True)
