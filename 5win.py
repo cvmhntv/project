@@ -25,5 +25,5 @@ class fifth_win(QWidget):
     def next_click(self):
         self.hide()
 app = QApplication([])
-mw = MainWin()
+mw = fifth_win()
 app.exec_()
