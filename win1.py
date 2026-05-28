@@ -1,4 +1,6 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QPushButton
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import (QApplication, QWidget, QLabel, QVBoxLayout,
+                             QHBoxLayout, QPushButton, QRadioButton, QMessageBox)
 from instr import *
 from win2 import second_win
 
@@ -12,14 +14,12 @@ class first_win(QWidget):
     def set_appear(self):
         self.setWindowTitle(text3_title)
         self.resize(win_width, win_height)
-        self.move(win_x, win_y)
-
     def initUI(self):
         self.intro = QLabel(text1_intro)
         self.intro.setWordWrap(True)
         self.button = QPushButton(text2_button)
         self.layout = QVBoxLayout()
-        self.layout.addWidget(self.intro)
+        self.layout.addWidget(self.intro, alignment=Qt.AlignCenter)
         self.layout.addWidget(self.button)
         self.setLayout(self.layout)
     def connects(self):
